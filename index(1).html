@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FR - For Real, Make Yourself Better Than Before</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 基本样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* 主要内容样式 */
+        .section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4CAF50;
+            display: inline-block;
+        }
+
+        /* 关于我们团队样式 */
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .team-member {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .team-title {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .team-description {
+            color: #777;
+        }
+
+        /* 服务套餐样式 */
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .service {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service-price {
+            font-size: 1.2rem;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .service-features {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+
+        .service-features li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .service-features li:before {
+            content: '•';
+            color: #4CAF50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .service-recommendation {
+            font-style: italic;
+            color: #777;
+            margin-top: 15px;
+        }
+
+        /* 免费咨询样式 */
+        .consultation {
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .consultation-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .consultation-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .consultation-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .consultation-icon {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+
+        /* 标语样式 */
+        .slogan {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .team-container,
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-member,
+            .service {
+                width: 100%;
+            }
+
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .slogan {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">FR</div>
+            <div class="tagline">For real, make yourself better than before</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section" id="description">
+            <h2 class="section-title">Description</h2>
+            <p>Do you have worries about whether you are good enough for attracting people and being confident during social interactions with others?</p>
+        </section>
+
+        <section class="section" id="about-team">
+            <h2 class="section-title">About Our Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="team-name">Frank Huang</div>
+                    <div class="team-title">Head Manager</div>
+                    <div class="team-title">Founder</div>
+                    <p class="team-description">The one who will follow your progress according to your plan</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-name">Rex Cheung</div>
+                    <div class="team-title">Gym Teacher</div>
+                    <div class="team-title">Body Builder</div>
+                    <div class="team-title">Diet Guide</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="service-bundles">
+            <h2 class="section-title">Service Bundles</h2>
+            <div class="services-container">
+                <div class="service">
+                    <div class="service-title">Service 1</div>
+                    <div class="service-price">1500 HKD per/month</div>
+                    <ul class="service-features">
+                        <li>VIP: 4 big sessions a week</li>
+                        <li>15-minute of progress following everyday</li>
+                        <li>Can ask me questions anytime (6 limited a day)</li>
+                    </ul>
+                    <p class="service-recommendation">Recommended for customers who want to see changes every week</p>
+                </div>
+                <div class="service">
+                    <div class="service-title">Service 2</div>
+                    <div class="service-price">500 HKD per/month</div>
+                    <ul class="service-features">
+                        <li>1 lesson per week</li>
+                        <li>1 hour lesson</li>
+                    </ul>
+                    <p class="service-recommendation">Recommended for people who don't want to change too fast</p>
+                </div>
+            </div>
+
+            <div class="consultation">
+                <h3 class="consultation-title">30-Minute Free Consultant Experience</h3>
+                <div class="consultation-items">
+                    <div class="consultation-item">
+                        <span class="consultation-icon">👍</span>
+                        <span>Body (muscles)</span>
+                    </div>
+                    <div class="consultation-item">
+                        <span class="consultation-icon">👍</span>
+                        <span>Skin Condition</span>
+                    </div>
+                    <div class="consultation-item">
+                        <span class="consultation-icon">👍</span>
+                        <span>Image</span>
+                    </div>
+                    <div class="consultation-item">
+                        <span class="consultation-icon">👍</span>
+                        <span>Hairstyle</span>
+                    </div>
+                    <div class="consultation-item">
+                        <span class="consultation-icon">👍</span>
+                        <span>Mindset</span>
+                    </div>
+                    <div class="consultation-item">
+                        <span class="consultation-icon">👍</span>
+                        <span>Expression</span>
+                    </div>
+                    <div class="consultation-item">
+                        <span class="consultation-icon">👍</span>
+                        <span>Speaking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="slogan">BUILD YOURSELF INTO HOW U LIKE!!!</div>
+    </main>
+
+    <footer>
+        <div class="container" style="text-align: center;">
+            <p>&copy; <span id="current-year"></span> FR. All rights reserved.</p>
+        </div>
+        <script>
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>
